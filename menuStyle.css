@@ -1,0 +1,96 @@
+body{
+  background-image: url("images/fondo.jpg");
+}
+#container{
+  width: 910px;
+  margin: 150px auto;
+  float: left;
+  margin-left: 40px;
+
+}
+#container img{
+  cursor: pointer;
+}
+#previa{
+  background: rgba(0,0, 0, 0);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#previa div{
+  margin: 80px;
+  margin-left: 175px;
+  width: 381px;
+}
+
+#divEjemplo{
+  float: right;
+  width: 300px;
+  margin: 150px auto;
+  margin-right:40px;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+input[type="text"],input[type="button"],select{
+	padding: 7px;
+	border-radius: 2px;
+	border: solid 1px #ccc;
+	background: #DCB129;
+	color: #785537;
+}
+
+h1{
+	text-shadow: 1px 1px 1px #ccc;
+	font-size: 0px;
+  color: #785537;
+}
+
+	#divEjemplo{
+		padding: 10px;
+		border: solid 1px #ccc;
+		border-radius: 3px;
+		box-shadow: 0 0 10px #ccc;
+		background: #DCB129 ;
+	}
+		#divEjemplo select{
+			width: 225px;
+		}
+
+		#divLista{
+			max-height: 330px;
+			overflow: auto;
+		}
+
+			#divLista ul{
+				list-style-type: none;
+			}
+				#divLista ul li{
+					padding: 7px;
+					border-radius: 3px;
+				}
+					#divLista ul li:nth-child(odd){
+						background:#f1c046 ;
+					}
+					#divLista ul li:nth-child(even){
+						background: #f3c85e;
+					}
+					#divLista ul li a.clsEliminarElemento{
+						padding: 5px;
+						border: solid 1px #ccc;
+						background: #fff url("images/basura.png") center no-repeat;
+						border-radius: 3px;
+						width: 16px;
+						display: inline-block;
+						margin-right: 10px;
+						cursor: pointer;
+					}
+						#divLista ul li a.clsEliminarElemento:hover{
+							border-color: #f00;
+						}

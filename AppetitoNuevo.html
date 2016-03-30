@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang ="es">
+
+<head>
+<meta charset="UTF-8">
+<title> APPETITO</title>
+<link rel="stylesheet" href="default.css">
+<link rel="stylesheet" href="cabeceraStyle.css">
+<link rel="stylesheet" href="menuStyle.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header class="cabecera">
+		<div class="container clearfix">
+			<div class="logo">
+				<img src="images/logo.PNG">
+			</div>
+
+		<nav class="menu">
+			<ul class="clearfix">
+				<li> <input id="caja" type="text2" name="buscar"> </li>
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">Contacto</a></li>
+				<li><a id="open" href="#">Login</a></li>
+	            <form id="login" onsubmit="javascript:return Validar(this);">
+	              <label> Usuario: </label>
+	              <input type="text1" id="usuario" value="" onblur="javascript:Validar();">
+	              <label> Clave: </label>
+	              <input type="password" id="clave" value="" onblur="javascript:Validar();">
+	              <input type="submit" id="ingresar" value="Ingresar"/>
+								<div id="resultado"></div>
+	            </form>
+
+<script type="text/javascript">
+function Validar(){
+	var usuario = document.getElementById('usuario').value;
+	var clave = document.getElementById('clave').value;
+	if(usuario==""){
+		$('#resultado').html('Debes ingresar un usuario').slideDown(500);
+		$('#usuario').focus();
+		return false;
+	} else {
+		$('#resultado').html('').slideUp(300);
+	}
+	if(clave==""){
+		$('#resultado').html('Debes ingresar una clave').slideDown(500);
+		$('#clave').focus();
+		return false;
+	} else {
+		$('#resultado').html('').slideUp(300);
+	}
+}
+
+
+</script>
+			</ul>
+		</nav>
+		</div>
+	</header>
+
+
+
+
+
+<section class="slider-container">
+
+<ul id="slider" class="slider-wrapper">
+<li class="slide-current">
+<img src="images/picnic.jpg" alt="Slider imagen 1">
+<div class="caption">
+<h3 class="caption-title">Bellos paisajes</h3>
+<p>Puedes disfrutar de buenos lugares acompañados de la mejor comida</p>
+</div>
+</li>
+
+
+<li>
+<img src="images/picnic2.jpg" alt="Slider imagen 2">
+<div class="caption">
+<h3 class="caption-title">Deliciosa comida</h3>
+<p>Con Appetito puedes tener la mejor experiencia en salidas de campo con toda tu familia</p>
+</div>
+</li>
+
+
+<li>
+<img src="images/picnic3.jpg" alt="Slider imagen 3">
+<div class="caption">
+<h3 class="caption-title">Disfruta de la naturaleza</h3>
+<p>Disfruta de la naturaleza, pero siempre acompañados por Appetito</p>
+</div>
+</li>
+
+
+<li>
+<img src="images/comida.jpg" alt="Slider imagen 4">
+<div class="caption">
+<h3 class="caption-title">Exquisitos platos</h3>
+<p>Si de buenas comidas de trata, Appetito te ofrece gran variedad de platos y menús</p>
+</div>
+</li>
+</ul>
+<div class ="shadow"></div>
+
+<ul id="slider-controls" class ="slider-controls"></ul>
+
+</section>
+<div id="imagen-vegetariana">
+<a href ="vegetariano.html" target="_self"><img id ="imgVeg" src="images/VegtarianaNueva.jpg" alt ="Imagen vegetariana"></a>
+<p id="nombre-vegetariana"><a href ="vegetariano.html" target="_self">Comida vegetariana</a></p></div>
+<div id="imagen-nacional">
+<a href ="nacional.html" target="_self"><img id= "imgNac" src="images/nacionalNueva.jpg" alt ="Imagen Nacional"></a>
+<p id="nombre-nacional"><a href ="nacional.html" target="_self">Comida Nacional</a></p></div>
+<div id="imagen-internacional">
+<a href ="internacional.html" target="_self"><img id="imgInt" src="images/Internacional.jpg" alt ="Imagen Internacional"></a>
+<p id="nombre-internacional"><a href ="internacional.html" target="_self">Comida Internacional</a></p></div>
+
+
+
+<div class="container">
+<div id="sidebar">
+		 <ul>
+				 <li><a href="#">Menús</a></li>
+				 <li><a href="Galeria.html" target="_blank">Galeria</a></li>
+				 <li><a href="#">Productos</a></li>
+				 <li><a href="#">Eventos</a></li>
+		 </ul>
+ </div>
+
+
+<div class ="quienes-somos-clase">
+	<div id="q-somos">
+	<p><strong><h3>¿Quienes somos?</h3></strong></p>
+		<br>
+
+
+			<p id="quienes-somos">Somos una empresa dedicada a la elaboración
+				de comida para acompañar todo tipo de paseos y salidas de campo.
+				<br>
+				<br>
+				Solo llamanos y llegaremos de inmediato
+			</p>
+
+	</div>
+</div>
+
+
+ <div class="main-content">
+ </div>
+</div>
+<script src="js/jquery-1.12.2.min.js"></script>
+<script src="js/main.js"></script>
+<script src="vegetarianoSc.js"></script>
+
+<footer>
+<p id="siguenos"> <i>Síguenos en:</i></p>
+<img id="fb"src="footer/fb.png" alt="Facebook"/>
+<img id="tw" src="footer/tw.png" alt="Twitter"/>
+<img id="instagram" src="footer/instagram.png" alt="Instagram"/>
+<p id="email-info"><i> Email: <u> Appetito@gmail.com</u> - <u>Contáctenos</u></i>
+<p id="politica"><i><u> Politica de privacidad</u></i>
+<p id="ano"> 2016	</p>
+</p>
+</footer>
+
+
+
+
+
+</body>
+</html>

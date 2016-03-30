@@ -1,0 +1,380 @@
+/**
+ * Fondo: #242c38
+ * Gris Claro: #415066
+ * Verde Azulado: #00c5b9
+ ----------------------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+  background-image: url("images/fondo.jpg");
+	font-family: 'Roboto', Arial, Tahoma, Sans-serif, Verdana, Helvetica;
+	font-size: 62.5%;
+}
+
+
+a {
+	color: #dcb129;
+	text-decoration: none;
+}
+a:hover{
+	color: #785537;
+}
+
+ul {
+	list-style-type: none;
+}
+
+/*
+Encabezado del Slider
+ ----------------------------------------*/
+.slider-title {
+	text-align: center;
+	margin: 80px 0 40px;
+	font-size: 3.2em;
+	font-weight: 300;
+	color: #FFF;
+}
+
+/**
+ * Contendor del Slider
+ ----------------------------------------*/
+.slider-container {
+	margin: 0 auto;
+	width: 800px;
+	margin-top: 30px;
+}
+
+.slider-wrapper {
+	position: relative;
+	z-index: 90;
+	height: 360px;
+	width: 100%;
+	border: 5px solid #FACC2E;
+	overflow: hidden;
+}
+
+.slider-wrapper li {
+	display: none;
+}
+
+li.slide-current {
+	display: block;
+}
+
+.slider-wrapper li img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+/**
+ * Caption
+ ----------------------------------------*/
+.caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(0,0,0,0.6);
+	padding: 12px;
+	-webkit-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	-o-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.caption-title {
+	color: #ee8c13;
+	font-weight: 700;
+	font-size: 1.6em;
+	margin-bottom: 10px;
+}
+
+.caption p {
+	color: #FFF;
+	font-size: 1.4em;
+	line-height: 1.3em;
+}
+
+.slider-wrapper li:hover .caption {
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+}
+
+/**
+ * Sombras
+ ----------------------------------------*/
+.shadow {
+	width: 100%;
+	height: 15px;
+	position: relative;
+}
+
+.shadow:after, .shadow:before {
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: #FE9A2E;   /* la de abajooo */
+	position: absolute;
+	left: 10px;
+	top: -20px;
+	-webkit-transform: rotate(-4deg);
+	-ms-transform: rotate(-4deg);
+	-o-transform: rotate(-4deg);
+	transform: rotate(-4deg);
+	-webkit-box-shadow: 0 0 15px 8px #B45F04;
+	-moz-box-shadow: 0 0 15px 8px #B45F04;
+	box-shadow: 0 0 15px 8px #B45F04;
+}
+
+.shadow:after {
+	left: auto;
+	right: 10px;
+	-webkit-transform: rotate(4deg);
+	-ms-transform: rotate(4deg);
+	-o-transform: rotate(4deg);
+	transform: rotate(4deg);
+}
+
+/**
+ * Controles del Slider
+ ----------------------------------------*/
+.slider-controls {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.slider-controls li {
+	background: #F7D358;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	margin: 0 4px;
+	cursor: pointer;
+}
+
+.slider-controls li.active {
+	background: #B45F04;
+}
+
+
+/**
+ * Responsive
+ ----------------------------------------*/
+@media only screen and (max-width: 825px) {
+	.slider-container {
+		width: 500px;
+	}
+
+	.slider-wrapper {
+		height: 260px;
+	}
+}
+
+@media only screen and (max-width: 535px) {
+	.slider-container {
+		padding: 5px;
+		width: 100%;
+	}
+
+	.slider-wrapper {
+		height: 200px;
+	}
+
+	.caption {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 410px) {
+	.slider-wrapper {
+		height: 160px;
+	}
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+}
+
+#sidebar {
+    position: absolute;
+
+    width: 240px;
+    height: 100%;
+
+    box-sizing: border-box;
+   -moz-box-sizing: border-box;
+}
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 40px; //bajarlo
+}
+#sidebar ul li {
+    margin: 0;
+}
+#sidebar ul li a {
+    padding: 15px 20px;
+    font-size: 25px;
+    font-weight: 100;
+    color: black;
+    text-decoration: none;
+    display: block;
+border-top: 1px solid  #785537;
+    border-bottom: 1px solid  #785537;
+    -webkit-transition:  background 0.3s ease-in-out;
+    -moz-transition:  background 0.3s ease-in-out;
+    -ms-transition:  background 0.3s ease-in-out;
+    -o-transition:  background 0.3s ease-in-out;
+    transition:  background 0.3s ease-in-out;
+}
+#sidebar ul li:hover a {
+    background:#dcb129;
+      color: #fff;}
+
+#q-somos{
+margin-left: 1100px;
+width: 200px;
+margin-top: 0px;
+float:right;
+margin-right: 45px;
+margin-bottom: 400px;
+font-size: 20px;
+color:#dcb129;
+
+}
+.quienes-somos-clase{
+	margin-top: -750px;
+}
+h3
+{
+	color: #785537;
+}
+#caja{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 4px;
+  margin-top: 26px;
+  margin-right: 20px;
+}
+
+#imagen-vegetariana{
+width: 40ex;
+height: 40ex;
+display: inline-block;
+margin-left: 240px;
+margin-top:40px;
+}
+
+#imagen-nacional{
+
+display:inline-block;
+margin-left: 120px;
+margin-right: auto;
+margin-top: 40px;
+}
+
+#imagen-internacional{
+
+  display:inline-block;
+  margin-left: 30px;
+  margin-right: auto;
+  margin-top: 40px;}
+
+#nombre-vegetariana{
+  width: 40ex;
+  height: 40ex;
+  display: inline-block;
+  margin-left: 50px;
+  font-size: 20px;
+  color: #785537;
+  font-weight: bold;
+}
+#nombre-nacional{
+  margin-left: 80px;
+  font-size: 20px;
+  color: #785537;
+  font-weight: bold;
+}
+
+#nombre-internacional{
+  font-size: 20px;
+  margin-left: 60px;
+  color: #785537;
+  font-weight: bold;
+}
+
+
+#imgVeg{
+border-radius: 15%;
+}
+#imgNac{
+border-radius: 15%;
+}
+#imgInt{
+  border-radius: 15%;
+}
+#siguenos{
+margin-top: 900px;
+margin-left: 620px;
+color: #424242;
+font-size: 20px;
+
+}
+#fb{
+margin-top: 30px;
+margin-left: 530px;
+}
+
+#tw{
+margin-top: 30px;
+margin-left: 80px;
+}
+#instagram{
+	margin-top:30px;
+	margin-left: 70px;
+}
+#email-info{
+margin-top: 20px;
+margin-left: 520px;
+color: #424242;
+font-size: 17px;
+}
+#contactenos{
+	margin-top: 5px;
+	margin-left: 570px;
+	color: #424242;
+	font-size: 17px;
+}
+#politica{
+	margin-top: 5px;
+	margin-left: 590px;
+	color: #424242;
+	font-size: 17px;
+}
+#ano{
+	margin-top: 5px;
+	margin-left: 650px;
+	color: #424242;
+	font-size: 17px;
+}

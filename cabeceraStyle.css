@@ -1,0 +1,75 @@
+.clearfix::before,.clearfix:after{
+  display: table;
+  content: "";
+}
+.clearfix:after{
+  clear: both;
+}
+.cabecera .container{
+  width:1170px;
+  margin-top:20px;
+  padding: 0 15px;
+}
+.cabecera .logo{
+  float: left;
+  width: 250px;
+  padding: 10 px 0;
+  margin-left: 180px;
+}
+a{
+  color: #505961;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+a:hover{
+  color: #2fb677;
+}
+.cabecera .menu{
+  float: right;
+  margin-right: -80px;
+
+}
+.cabecera .menu ul{
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.cabecera .menu ul li{
+  float: left;
+}
+.cabecera .menu ul li a{
+  padding: 0 15px;
+  color: #785537;
+  font-size: 25px;
+  line-height: 84px;
+}
+.cabecera .menu ul li a:hover, .cabecera .menu ul li.active a{
+  color: #fff;
+  box-shadow: 0 84px 0 #DCB129 inset;
+}
+#buscar{
+  margin-right: 0;
+}
+#login{
+  width: 200px;
+  height: 160px;
+  background: #efefc9;
+  border-radius: 2px;
+  padding: 10px;
+  color: #785537;
+  font-size: 15px;
+}
+#ingresar{
+  border: none;
+  border-radius: 5px;
+  margin: 15px 65px;
+  width: 75px;
+  color: #785537;
+}
+#login{
+    margin-top: 80px;
+    margin-right: 40px;
+    margin-left: 300px;
+}
